@@ -35,11 +35,12 @@ api:
 
 # If you don't want to use ESPHome's native API you can use MQTT instead.
 # In this case don't forget to remove the 'api:' section.
-# mqtt:
-#  broker: !secret mqtt_host
-#  username: !secret mqtt_username
-#  password: !secret mqtt_password
-#  id: mqtt_client
+mqtt:
+  broker: !secret mqtt_host
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  id: mqtt_client
 
 # In the event of problems with the WiFi network, the ESP32 will reboot every 15 minutes to try to resolve the problem.
 # If we don't want to connect the ESP32 to the WiFi network please remove the 4 lines below.
@@ -62,10 +63,11 @@ captive_portal:
 # +--------------------------------------+
 packages:
   # Board : uncomment your board
-  device_board: !include packages/board/board_esp32-devkit-v1.yaml
+  #device_board: !include packages/board/board_esp32-devkit-v1.yaml
   # device_board: !include packages/board/board_esp32-s3-devkitc-1.yaml
   # device_board: !include packages/board/board_atom-lite.yaml
-  # device_board: !include packages/board/board_atom-s3-lite.yaml
+  #device_board: !include packages/board/board_atom-s3-lite.yaml
+  device_board: !include packages/board/board_atom-s3-lite-CANBus-Unit-CA-IS3050G-SKU-U085.yaml
   
   # device_board: !include
   #   file: packages/board/board_atom-s3-display.yaml
