@@ -297,7 +297,7 @@ mqtt:
 # If we don't want to connect the ESP32 to the WiFi network please remove the 4 lines below.
 wifi:
   # Reintroduced on 2024-05-17 while attempting to solve a WiFi Signal Loss triggering Device Watchdog Issue
-  power_save_mode: light # Reducing Power Saving Could help reduce issues with OTA
+  #power_save_mode: light # Reducing Power Saving Could help reduce issues with OTA
 
   # Set Reboot Timeout somewhat
   # !! Reboot timeout only works with AP disabled !!
